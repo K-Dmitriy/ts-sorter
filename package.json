@@ -1,0 +1,29 @@
+{
+  "name": "project-sorter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start:build": "tsc -w",
+	"start:run": "nodemon build/index.js",
+	"start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K-Dmitriy/ts-sorter.git"
+  },
+  "keywords": [
+    "sorter"
+  ],
+  "author": "DK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K-Dmitriy/ts-sorter/issues"
+  },
+  "homepage": "https://github.com/K-Dmitriy/ts-sorter#readme"
+}

@@ -1,3 +1,5 @@
 ## RUN
 
-### tsc / tsc -w
+### npm i
+
+### npm start
