@@ -1,17 +1,18 @@
 class Sorter {
-	constructor(public collection: number[]) { }
+	constructor(public collection: number[] | string) {}
 
 	sort(): void {
 		const { length } = this.collection;
 
 		for (let j = 0; j < length; j++) {
 			for (let i = 0; i < length - j - 1; i++) {
-				
-				const currentElement = this.collection[i];
-
-				if (i !== length && currentElement > this.collection[i + 1]) {
-					this.collection[i] = this.collection[i + 1];
-					this.collection[i + 1] = currentElement;
+				if (this.collection instanceof Array) {
+					//collection has type of number[]
+					if (this.collection[i] > this.collection[i + 1]) {
+						const currentElement = this.collection[i];
+						this.collection[i] = this.collection[i + 1];
+						this.collection[i + 1] = currentElement;
+					}
 				}
 			}
 		}
